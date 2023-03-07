@@ -87,12 +87,12 @@ int	main(int argc, char **argv, char **envp)
 		if (next == PIPE)
 			close (fd[1]);
 
-		waitpid(pid, NULL, 0);
-
 		begin += (end - begin + 1);
 
 		last = next;
 		//printf("\nnew begin ->%d \n", begin);
 	}
 
+	wait(NULL);
+	
 }
