@@ -82,7 +82,7 @@ int	main(int argc, char **argv, char **envp)
 			||	(get_type(argv[begin + 1]) != CONTENT)
 			||	(get_type(argv[begin + 2]) == CONTENT) )
 			{
-				write(2, "error: cd: bad arguments\n", 23);
+				write(2, "error: cd: bad arguments\n", 25);
 			}
 			else
 			{
