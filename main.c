@@ -53,7 +53,7 @@ int	main(int argc, char **argv, char **envp)
 		return 1;
 	}
 
-	while (type != END)
+	while (argv[begin] && type != END)
 	{
 		while (argv[end] && get_type(argv[end]) == CONTENT)
 			end++;
