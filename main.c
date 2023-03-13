@@ -63,6 +63,13 @@ int	main(int argc, char **argv, char **envp)
 		if (argv[end] == NULL)
 			type = END;
 
+		//securisation segfault + passer les points de controle seuls
+		if (begin == end) {
+			begin++;
+			end = begin;
+			continue;
+		}
+
 		argv[end] = NULL;
 
 		if (type == PIPE) {
