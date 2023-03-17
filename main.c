@@ -134,8 +134,7 @@ int	main(int argc, char **argv, char **envp)
 			old_pipe = fd[0];
 		}
 
-		while(waitpid(-1, NULL, WUNTRACED) != -1)
-			;
+		waitpid(0, NULL, 0);
 
 		last_type = type;
 		begin = end + 1;
